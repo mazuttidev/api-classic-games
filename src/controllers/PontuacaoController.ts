@@ -1,4 +1,3 @@
-// src/controllers/PontuacaoController.ts
 import { Request, Response } from 'express';
 import { PontuacaoService } from '../services/PontuacaoServices';
 

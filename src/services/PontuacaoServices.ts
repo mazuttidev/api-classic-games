@@ -1,4 +1,3 @@
-// src/services/PontuacaoService.ts
 import { PontuacaoRepository } from '../repositories/PontuacaoRepository';
 import { JogosRepository } from '../repositories/JogosRepository';
 import { JogadorRepository } from '../repositories/JogadorRepository';

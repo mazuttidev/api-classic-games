@@ -1,5 +1,3 @@
-// src/controllers/JogosController.ts
-
 import { Request, Response } from 'express';
 import { JogosService } from '../services/JogosServices';
 
