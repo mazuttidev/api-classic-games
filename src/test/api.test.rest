@@ -1,0 +1,74 @@
+### Listar todos os jogos
+GET http://localhost:3000/jogos
+
+###
+
+### Buscar jogo por ID
+GET http://localhost:3000/jogos/1
+
+###
+
+### Cadastrar novo jogo
+POST http://localhost:3000/jogos
+Content-Type: application/json
+
+{
+  "nome": "Sonic",
+  "plataforma": "Mega Drive",
+  "ano_lancamento": 1991
+}
+
+###
+
+### Atualizar jogo existente
+PUT http://localhost:3000/jogos/1
+Content-Type: application/json
+
+{
+  "nome": "Sonic the Hedgehog",
+  "plataforma": "Mega Drive",
+  "ano_lancamento": 1991
+}
+
+###
+
+### Excluir um jogo
+DELETE http://localhost:3000/jogos/1
+
+###
+
+### Listar todos os jogadores
+GET http://localhost:3000/jogadores
+
+###
+
+### Cadastrar novo jogador
+POST http://localhost:3000/jogadores
+Content-Type: application/json
+
+{
+  "nome": "Victor Mazutti",
+  "nickname": "mazuttidev"
+}
+
+###
+
+### Cadastrar nova pontuação
+POST http://localhost:3000/pontuacoes
+Content-Type: application/json
+
+{
+  "jogo_id": 1,
+  "jogador_id": 1,
+  "pontuacao": 5000
+}
+
+###
+
+### Buscar ranking de um jogo
+GET http://localhost:3000/ranking/1
+
+###
+
+### Buscar top 3 jogos populares
+GET http://localhost:3000/jogos/populares

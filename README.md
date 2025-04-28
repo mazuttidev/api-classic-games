@@ -56,5 +56,8 @@ npm install
 # Configure seu arquivo .env com os dados do MySQL
 cp .env.example .env
 
+# Criação do schema via terminal (opcional)
+mysql -u root -p nome_do_banco < src/database/schema.sql
+
 # Inicie o servidor
 npm run dev

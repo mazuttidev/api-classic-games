@@ -1,0 +1,181 @@
+{
+  "info": {
+    "name": "Classic Games API",
+    "_postman_id": "d5f3ef12-93ad-4c1e-8d6d-f7abcf291234",
+    "description": "Coleção de testes para a API de Jogos Retrô",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Jogos",
+      "item": [
+        {
+          "name": "Listar todos os jogos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/jogos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["jogos"]
+            }
+          }
+        },
+        {
+          "name": "Buscar jogo por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/jogos/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["jogos", "1"]
+            }
+          }
+        },
+        {
+          "name": "Cadastrar novo jogo",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Sonic\",\n  \"plataforma\": \"Mega Drive\",\n  \"ano_lancamento\": 1991\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/jogos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["jogos"]
+            }
+          }
+        },
+        {
+          "name": "Atualizar jogo",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Sonic the Hedgehog\",\n  \"plataforma\": \"Mega Drive\",\n  \"ano_lancamento\": 1991\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/jogos/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["jogos", "1"]
+            }
+          }
+        },
+        {
+          "name": "Excluir jogo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/jogos/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["jogos", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jogadores",
+      "item": [
+        {
+          "name": "Listar todos os jogadores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/jogadores",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["jogadores"]
+            }
+          }
+        },
+        {
+          "name": "Cadastrar novo jogador",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Victor Mazutti\",\n  \"nickname\": \"mazuttidev\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/jogadores",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["jogadores"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pontuações",
+      "item": [
+        {
+          "name": "Cadastrar nova pontuação",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jogo_id\": 1,\n  \"jogador_id\": 1,\n  \"pontuacao\": 5000\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/pontuacoes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["pontuacoes"]
+            }
+          }
+        },
+        {
+          "name": "Ranking de um jogo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/ranking/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["ranking", "1"]
+            }
+          }
+        },
+        {
+          "name": "Top 3 jogos mais populares",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/jogos/populares",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["jogos", "populares"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
