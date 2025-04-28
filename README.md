@@ -45,7 +45,7 @@ A API foi desenvolvida com base em princípios de Programação Orientada a Obje
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/retro-games-api.git
+git clone https://github.com/mazuttidev/api-classic-games.git
 
 # Acesse a pasta do projeto
 cd retro-games-api
